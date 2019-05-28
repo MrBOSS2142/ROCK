@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
 }
 
@@ -33,7 +34,6 @@ body {
   margin-left: 130px;
   transition: all 0.3s ease;
 }
-
 
 .navbar {
   min-height: 55px;
@@ -155,7 +155,6 @@ h3 {
   #home {
     background-position: 30%;
   }
-  
 }
 
 @media (max-width: 320px) {
@@ -163,8 +162,6 @@ h3 {
     width: 120px;
   }
 }
-
-
 
 @media (max-width: 950px) {
   #brand-image {
@@ -222,34 +219,107 @@ h3 {
   margin-left: -30px;
 }
 
-.section-heading {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
 .padding {
   padding: 50px 0;
 }
 
+/* кнопка вверх страницы */
 div.back-to-top {
   z-index: 20;
-  position: fixed; /* фиксированная позиция */
-  color: #fff; /* цвет текста */
-  background-color: #be1522; /* цвет заднего фона */
-  right: 20px; /* расстояние от правого края */
-  bottom: 0px; /* расстояние от нижнего края */
-  padding: 4px 10px; /* отступы до содержимого блока */
+  position: fixed;
+  color: #fff;
+  background-color: #be1522;
+  right: 20px;
+  bottom: 10px;
+  padding: 5px 10px; /* отступы до содержимого блока */
   font-size: 20px; /* размер шрифта (иконки) */
-  border-top-left-radius: 4px; /* скругление верхнего левого угла */
-  border-top-right-radius: 4px; /* скругление верхнего правого угла */
-  cursor: pointer; /* форма курсора */
-  display: none; /* не отображать элемент */
-  text-align: center; /*выравнивание содержимого элемента по центру */
+  border-radius: 4px;
+  cursor: pointer;
+  display: none; /* не отображать элемент по умолчанию */
+  text-align: center;
   opacity: 0.6;
-}
-div.back-to-top:hover {
-  background-color: #000; /* цвет заднего фона при наведении */
+  transition: all 0.3s ease;
 }
 
+div.back-to-top:hover {
+  opacity: 1;
+}
+
+/* блок историй */
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.history-block {
+  width: 100%;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+}
+
+.history-block .history-1,
+.history-block .history-2,
+.history-block .history-3,
+.history-block .history-4 {
+  height: 70vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.history-text {
+  width: 65%;
+}
+
+.col-sm-6 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.history-block h2 {
+  font-family: LatoLight;
+  color: #e9e9e9;
+  font-size: 1.5em;
+  margin-bottom: 15%;
+}
+
+@media (max-width: 990px)
+{
+  .history-block h2 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 1250px)
+{
+  .history-block h2 {
+    font-size: 1.3em;
+  }
+}
+
+.history-block .history-1 {
+  background-image: url(../img/beatles.jpg);
+}
+
+.history-block .history-2 {
+  background-image: url(../img/megadeth1.jpg);
+}
+
+.history-block .history-3 {
+  background-image: url(../img/nirvana.jpg);
+}
+
+.history-block .history-4 {
+  background-image: url(../img/linkin-park.jpg);
+}
+
+.history-overlay {
+  height: 70vh !important;
+  background-color: #080d15a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
