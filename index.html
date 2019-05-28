@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ROCK. Главная страница. История рока</title>
+
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/button_toggle.css" />
+    <link type="text/css" rel="stylesheet" href="css/carousel.css" />
+  </head>
+
+  <body>
+    <!--Хидер-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse-main"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img id="brand-image" src="img/Logo_final.png" alt="ROCK" />
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-main">
+          <div class="row justify-content-center">
+            <div class="col">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="nav_items">
+                  <a href="#" class="active">Главная</a>
+                </li>
+                <li class="nav_items">
+                  <a href="#">Новости</a>
+                </li>
+                <li class="nav_items">
+                  <a href="#">Тексты</a>
+                </li>
+                <li class="nav_items">
+                  <a href="#">Контакты</a>
+                </li>
+                <li class="nav_items sign_in">
+                  <a href="#"
+                    >Вход<img
+                      src="img/user2.png"
+                      style="width: 20px; margin-left: 5px;"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--Банер-->
+    <div id="home">
+      <div class="landing-text">
+        <h2>Рок - это способность внести свободу в мир и разум людей</h2>
+        <a href="#text"
+          ><i class="fa fa-angle-down fa-5x arrow" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- блок с названием блока -->
+    <div id="text" class="padding black_article_block">
+      <div class="container-liquid">
+        <div class="text-center">
+          <h4>Последние новости</h4>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- слайдер -->
+    <div class="slider_block">
+      <div class="container-liquid">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="carousel fade-carousel slide"
+              data-ride="carousel1"
+              data-interval="1000"
+              id="bs-carousel"
+            >
+              <!-- Затемнение -->
+              <div class="overlay"></div>
+
+              <!-- Индикаторы -->
+              <ul class="carousel-indicators">
+                <li
+                  data-target="#bs-carousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#bs-carousel" data-slide-to="1"></li>
+                <li data-target="#bs-carousel" data-slide-to="2"></li>
+              </ul>
+
+              <!-- Слайды -->
+              <div class="carousel-inner">
+                <div class="item slides active">
+                  <div class="slide-1">
+                    <div class="hero">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col">
+                            <a href="#">
+                              <h1>
+                                Breaking Benjamin и Five Finger Death Punch
+                                пожертвовали 190 тысяч долларов на
+                                благотворительность
+                              </h1>
+                            </a>
+                            <div class="post-meta">
+                              <i
+                                class="fa fa-comments-o"
+                                aria-hidden="true"
+                              ></i>
+                              <p>15</p>
+
+                              <i class="fa fa-heart" aria-hidden="true"></i>
+                              <p>147</p>
+                              <i
+                                class="fa fa-calendar-minus-o"
+                                aria-hidden="true"
+                              ></i>
+                              <p>27/05/2019</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item slides">
+                    <div class="slide-2">
+                        <div class="hero">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col">
+                                <a href="#">
+                                  <h1>
+                                      Five Finger Death Punch пишут новый альбом
+                                  </h1>
+                                </a>
+                                <div class="post-meta">
+                                  <i
+                                    class="fa fa-comments-o"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <p>15</p>
+    
+                                  <i class="fa fa-heart" aria-hidden="true"></i>
+                                  <p>147</p>
+                                  <i
+                                    class="fa fa-calendar-minus-o"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <p>27/05/2019</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-3">
+                        <div class="hero">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col">
+                                <a href="#">
+                                  <h1>
+                                    Breaking Benjamin и Five Finger Death Punch
+                                    пожертвовали 190 тысяч долларов на
+                                    благотворительность
+                                  </h1>
+                                </a>
+                                <div class="post-meta">
+                                  <i
+                                    class="fa fa-comments-o"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <p>15</p>
+    
+                                  <i class="fa fa-heart" aria-hidden="true"></i>
+                                  <p>147</p>
+                                  <i
+                                    class="fa fa-calendar-minus-o"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <p>27/05/2019</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel Buttons Next/Prev -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- кнопка вверх -->
+    <div class="back-to-top">
+      <i class="fa fa-chevron-up"></i>
+    </div>
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- подключение файлов jquery и bootstrap js для слайдера. С другими чего-то не работает -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

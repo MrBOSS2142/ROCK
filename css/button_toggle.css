@@ -1,0 +1,18 @@
+.navbar-toggle {
+  overflow: hidden;
+}
+.navbar-toggle .icon-bar {
+  transition: opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.7, 0, 0, 0.7);
+}
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+  /* transform: translateX(-100%); */
+}
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
