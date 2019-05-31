@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
@@ -67,7 +67,7 @@
     </nav>
 
     <!--Банер-->
-    <div id="home">
+    <div id="home" data-stellar-background-ratio="0.5">
       <div class="landing-text">
         <h2>Рок - это способность внести свободу в мир и разум людей</h2>
         <a class="anchor" href="#text"
@@ -319,22 +319,34 @@
           <div class="col-md-4 box">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="https://twitter.com/MrBoss2142?lang=ru" target="_blank">
+                <a
+                  href="https://twitter.com/MrBoss2142?lang=ru"
+                  target="_blank"
+                >
                   <i class="fa fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.facebook.com/MrBOSS2142?ref=bookmarks" target="_blank">
+                <a
+                  href="https://www.facebook.com/MrBOSS2142?ref=bookmarks"
+                  target="_blank"
+                >
                   <i class="fa fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.instagram.com/ssukharevich/" target="_blank">
+                <a
+                  href="https://www.instagram.com/ssukharevich/"
+                  target="_blank"
+                >
                   <i class="fa fa-instagram"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/sergey-sukharevich-235522162/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/sergey-sukharevich-235522162/"
+                  target="_blank"
+                >
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
@@ -357,15 +369,12 @@
       <i class="fa fa-chevron-up"></i>
     </div>
 
-    <script src="script/jquery-3.4.1.min.js"></script>
+    <script src="script/jquery-2.0.2.js"></script>
     <script src="script/bootstrap.min.js"></script>
     <script src="script/main.js"></script>
-
-    <!-- подключение файла jquery для слайдера -->
-    <script
-      src="https://code.jquery.com/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"
-    ></script>
+    <script src="script/jquery.stellar.min.js"></script>
+    <script>
+      $.stellar();
+    </script>
   </body>
 </html>
