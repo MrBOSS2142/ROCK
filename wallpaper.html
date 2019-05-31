@@ -7,19 +7,12 @@
 
     <title>Обои</title>
 
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
-
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link type="text/css" rel="stylesheet" href="css/button_toggle.css" />
-    <link type="text/css" rel="stylesheet" href="css/carousel.css" />
-
-    <link
-      rel="stylesheet"
-      href="css/jquery.fancybox.css"
-      type="text/css"
-      media="screen"
-    />
+    <link type="text/css" rel="stylesheet" href="style/bootstrap.css" />
+    <link rel="stylesheet" href="style/font-awesome/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <link type="text/css" rel="stylesheet" href="style/button_toggle.css" />
+    <link type="text/css" rel="stylesheet" href="style/gallery.css" />
+    <link type="text/css" rel="stylesheet" href="style/baguetteBox.css" />
   </head>
 
   <body>
@@ -64,6 +57,7 @@
                     >Вход<img
                       src="img/user2.png"
                       style="width: 20px; margin-left: 5px;"
+                      alt=""
                   /></a>
                 </li>
               </ul>
@@ -84,225 +78,178 @@
     <div class="gallery">
       <div class="container">
         <div class="row">
+          <div class="col-sm-8">
+            <form class="form-find" action="wallpaper.html">
+              <div class="row">
+                <div class="col-md-8">
+                  <input
+                    class="input"
+                    id="name_group"
+                    type="text"
+                    name="name_group"
+                    placeholder="Название группы"
+                    pattern="[a-zА-я0-9]{3,25}$"
+                    required
+                  />
+                </div>
+                <div class="col-md-4">
+                  <button class="find-button" onclick="find_pict()">
+                    Поиск
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-md-3 col-sm-4 col-xs-6 thumb">
             <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/001.jpg"
+              class="lightbox"
+              href="img/gallery/1265056-breaking-benjamin.jpg"
             >
               <img
                 class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/001.jpg"
+                alt=""
+                src="img/gallery/1265056-breaking-benjamin.jpg"
               />
             </a>
           </div>
           <div class="col-md-3 col-sm-4 col-xs-6 thumb">
             <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/002.jpg"
+              class="lightbox"
+              href="img/gallery/1920x1080-1265063-breaking-benjamin.jpg"
             >
               <img
                 class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/002.jpg"
+                alt=""
+                src="img/gallery/1920x1080-1265063-breaking-benjamin.jpg"
+              />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="lightbox" href="img/gallery/233429.jpg">
+              <img class="img-responsive"
+              alt="" src="img/gallery/233429.jpg" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="lightbox" href="img/gallery/308223.jpg">
+              <img class="img-responsive"
+              alt="" src="img//gallery/308223.jpg" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a
+              class="lightbox"
+              href="img/gallery/Five-Finger-Death-Punch-Wallpaper-HQ.jpg"
+            >
+              <img
+                class="img-responsive"
+                alt=""
+                src="img/gallery/Five-Finger-Death-Punch-Wallpaper-HQ.jpg"
+              />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="lightbox" href="img/gallery/IDVCRDc.jpg">
+              <img class="img-responsive"
+              alt="" src="img/gallery/IDVCRDc.jpg" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="lightbox" href="img/gallery/aerosmith.jpg">
+              <img class="img-responsive"
+              alt="" src="img/gallery/aerosmith.jpg" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a
+              class="lightbox"
+              href="img/gallery/gruppa_rok_three_days_grace_adam_gontier_93351_1920x1080.jpg"
+            >
+              <img
+                class="img-responsive"
+                alt=""
+                src="img/gallery/gruppa_rok_three_days_grace_adam_gontier_93351_1920x1080.jpg"
+              />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="lightbox" href="img/gallery/kartinkijane.ru-64663.jpg">
+              <img
+                class="img-responsive"
+                alt=""
+                src="img/gallery/kartinkijane.ru-64663.jpg"
               />
             </a>
           </div>
           <div class="col-md-3 col-sm-4 col-xs-6 thumb">
             <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/003.jpg"
+              class="lightbox"
+              href="img/gallery/lou_reed_metallica_gruppa_uchastniki_ochki_4467_1920x1080.jpg"
             >
               <img
                 class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/003.jpg"
+                alt=""
+                src="img/gallery/lou_reed_metallica_gruppa_uchastniki_ochki_4467_1920x1080.jpg"
+              />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="lightbox" href="img/gallery/met.jpg">
+              <img class="img-responsive"
+              alt="" src="img/gallery/met.jpg" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="lightbox" href="img/gallery/metal.jpg">
+              <img class="img-responsive"
+              alt="" src="img/gallery/metal.jpg" />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="lightbox" href="img/gallery/metal2.jpg">
+              <img class="img-responsive"
+              alt="" src="img/gallery/metal2.jpg" />
+            </a>
+          </div>
+
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a
+              class="lightbox"
+              href="img/gallery/red-hot-chili-peppers-wallpapers-30531-4401655.jpg"
+            >
+              <img
+                class="img-responsive"
+                alt=""
+                src="img/gallery/red-hot-chili-peppers-wallpapers-30531-4401655.jpg"
+              />
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="lightbox" href="img/gallery/rhcp-background-12.png">
+              <img
+                class="img-responsive"
+                alt=""
+                src="img/gallery/rhcp-background-12.png"
               />
             </a>
           </div>
           <div class="col-md-3 col-sm-4 col-xs-6 thumb">
             <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/004.jpg"
+              class="lightbox"
+              href="img/gallery/three-days-grace-4f3770d7d9dd0.jpg"
             >
               <img
                 class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/004.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/005.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/005.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/006.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/006.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/007.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/007.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/008png"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/008.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/009.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/009.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/010.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/010.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/011.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/011.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/012.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/012.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/013.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/013.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/014.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/014.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/015.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/015.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/016.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/016.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/017.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/017.jpg"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-4 col-xs-6 thumb">
-            <a
-              class="fancyimage"
-              rel="group"
-              href="bootstrap3-image-gallery-600-400/018.jpg"
-            >
-              <img
-                class="img-responsive"
-                src="bootstrap3-image-gallery-600-400/018.jpg"
+                alt=""
+                src="img/gallery/three-days-grace-4f3770d7d9dd0.jpg"
               />
             </a>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12" style="padding: 5px;">
+          <div class="col-md-12" style="padding: 5px; margin-top: 25px;">
             <ul class="meta-pages">
               <li><a>1</a></li>
               <li><a>2</a></li>
@@ -330,22 +277,34 @@
           <div class="col-md-4 box">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a
+                  href="https://twitter.com/MrBoss2142?lang=ru"
+                  target="_blank"
+                >
                   <i class="fa fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a
+                  href="https://www.facebook.com/MrBOSS2142?ref=bookmarks"
+                  target="_blank"
+                >
                   <i class="fa fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a
+                  href="https://www.instagram.com/ssukharevich/"
+                  target="_blank"
+                >
                   <i class="fa fa-instagram"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a
+                  href="https://www.linkedin.com/in/sergey-sukharevich-235522162/"
+                  target="_blank"
+                >
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
@@ -355,7 +314,7 @@
             <h4 class="copyright quick-links">
               &copy; Sukharevich Sergey
               <script>
-                document.write(new Date().getFullYear()); // выводит текущий год
+                document.write(new Date().getFullYear());
               </script>
             </h4>
           </div>
@@ -368,22 +327,14 @@
       <i class="fa fa-chevron-up"></i>
     </div>
 
-    <script src="js/jquery-2.2.4.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
-    <script src="js/main.js"></script>
+    <script src="script/baguetteBox.js"></script>
 
-    <!-- подключение файлов jquery и bootstrap js для слайдера. С другими чего-то не работает -->
-    <script
-      src="https://code.jquery.com/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      baguetteBox.run(".gallery"); // запустить слайдер галереи
+    </script>
 
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
+    <script src="script/jquery-3.4.1.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/main.js"></script>
   </body>
 </html>

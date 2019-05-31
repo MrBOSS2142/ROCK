@@ -1,0 +1,36 @@
+
+  .thumb {
+    padding: 8px;
+  }
+  
+  .thumb img {
+    transition: all 0.5s;
+  }
+  
+  .thumb img:hover {
+    transform: scale(1.1);
+  }
+  
+  .lightbox {
+    display: block;
+    overflow: hidden;
+  }
+  
+  .gallery {
+    padding-top: 30px;
+    background: #14181c;
+  }
+  
+  .gallery .thumbnail {
+    padding: 0;
+    margin-bottom: 30px;
+    border: none;
+  }
+  
+  .gallery img {
+    border-radius: 2px;
+  }
+  
+  .baguetteBox-button {
+    background-color: transparent !important;
+  }

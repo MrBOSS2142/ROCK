@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  transition: all 0.5s;
 }
 
 a,
@@ -27,6 +28,8 @@ html,
 body {
   height: 100%;
   width: 100%;
+  /* шрифт по умолчанию у всех лементов LatoRegular */
+  font-family: LatoRegular;
 }
 
 .sign_in {
@@ -117,6 +120,7 @@ body {
   width: 100%;
   height: 100%;
   background-size: cover;
+  transition: all 0.3s;
 }
 
 h1,
@@ -260,12 +264,13 @@ div.back-to-top:hover {
 }
 
 .history-overlay {
-  height: 70vh !important;
-  background-color: #080d15a6;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 70vh !important;
+  background-color: #080d15a6;
+  transition: all 0.5s;
 }
 
 /* Футер */
@@ -328,85 +333,9 @@ ul.social-buttons li a {
 }
 
 .copyright {
-  color: white;
+  color: #ffffff;
+  font-family: LatoRegular;
   font-size: 1em;
-}
-
-/* Медиазапроссы */
-
-@media (max-width: 990px) {
-  .history-block h2 {
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 1250px) {
-  .history-block h2 {
-    font-size: 1.3em;
-  }
-}
-
-@media (max-width: 525px) {
-  .history-block h2 {
-    font-size: 1.1em;
-  }
-}
-
-@media (min-width: 768px) {
-  .footer-column ul {
-    text-align: left;
-  }
-}
-
-@media (max-width: 320px) {
-  .scrolled #brand-image {
-    width: 120px;
-  }
-}
-
-@media (max-width: 950px) {
-  #brand-image {
-    margin-left: 10%;
-  }
-
-  .navbar-brand {
-    margin: 0;
-  }
-
-  .sign_in {
-    margin-left: 20px;
-    margin-right: 10px;
-  }
-}
-
-@media (max-width: 850px) {
-  /* делаем картинке меньше размер и отступ*/
-  #brand-image {
-    width: 170px;
-  }
-  .sign_in {
-    margin-left: 0px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav_items {
-    margin-left: 10px !important;
-  }
-
-  #home {
-    background-position: 30%;
-  }
-}
-
-@media (max-width: 990px) {
-  footer .box {
-    margin-top: 15px;
-  }
-
-  .logo_sec {
-    width: 180px;
-  }
 }
 
 /* НОВОСТИ */
@@ -418,10 +347,12 @@ ul.social-buttons li a {
   width: 100%;
   height: 70%;
   background-size: cover;
+  background-position-y: top;
+  transition: all 0.3s;
 }
 
 figure {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 figure > img {
@@ -453,7 +384,7 @@ figure > img {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-right: 10px;
-  z-index: 20;
+  z-index: 10;
 }
 
 /* стили номеров страниц */
@@ -466,13 +397,14 @@ figure > img {
   color: #e9e9e9;
   font-size: 14px;
   margin-right: 10px;
-  padding: 2% 3%;
+  padding: 15px 25px;
   background: #4e5152;
   transition: all 0.3s;
 }
 
 .meta-pages li:hover {
   background: #323335;
+  cursor: pointer;
 }
 
 .meta-pages li a {
@@ -529,15 +461,6 @@ figure > img {
   font-size: 25.629px;
 }
 
-.post-category a:after {
-  content: ",";
-  display: inline-block;
-}
-
-.post-category a:last-child:after {
-  display: none;
-}
-
 .post .post-meta {
   margin-bottom: 10px;
 }
@@ -555,11 +478,6 @@ figure > img {
 
 .post li p {
   margin-right: 15px;
-}
-
-.post-meta li a:hover,
-.post-meta li a:focus {
-  color: #ee4266;
 }
 
 /* Сайдбар */
@@ -606,6 +524,17 @@ figure > img {
   color: #e9e9e9;
 }
 
+.section .second-tittle {
+  font-family: LatoRegular;
+  color: #e9e9e9 !important;
+}
+
+.section p {
+  font-family: LatoRegular;
+  color: #e9e9e9 !important;
+  font-size: 1.1em;
+}
+
 .page-header .page-header-bg {
   position: absolute;
   top: 0;
@@ -614,7 +543,7 @@ figure > img {
   bottom: 0;
 }
 
-/* затемнение для банера страницы нвовости */
+/* затемнение для банера страницы новости */
 .page-header .page-header-bg:after {
   content: "";
   position: absolute;
@@ -641,10 +570,6 @@ figure > img {
   color: #e9e9e9;
 }
 
-.page-header .post-category {
-  margin-bottom: 10px;
-}
-
 .page-header .post-meta li {
   color: #e9e9e9;
 }
@@ -653,14 +578,12 @@ figure > img {
   margin-right: 15px;
 }
 
-/* КОмментарии */
+/* Комментарии */
 
 .post-comments .media {
   margin-top: 30px;
-}
-
-.post-comments .media:nth-child(1) {
-  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
 }
 
 .post-comments .media .media-left {
@@ -676,34 +599,26 @@ figure > img {
   z-index: 20;
 }
 
-.post-comments .media .media-left:after {
-  content: "";
-  position: absolute;
-  left: calc(50% - 9px);
-  top: 80px;
-  bottom: 15px;
-  width: 1px;
-  background-color: #e8eaed;
-}
-
 .post-comments .media .media-heading h4 {
+  font-family: LatoRegular;
+  font-size: 1.2em;
+  font-weight: bold;
   color: #e9e9e9;
   display: inline-block;
-  font-size: 14px;
-  text-transform: uppercase;
 }
 
 .post-comments .media .media-heading .time {
   color: #97989b;
   margin-left: 10px;
-  font-size: 12px;
+  font-size: 0.8em;
+  font-family: LatoLight;
 }
 
 .post-comments .media .comment-text {
-  margin-left: 30px;
+  font-family: LatoRegular;
   margin-bottom: 30px;
   color: #e9e9e9;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .post-comments .media .reply {
@@ -711,7 +626,7 @@ figure > img {
   display: inline-block;
   padding: 5px 13px;
   font-size: 12px;
-  
+  font-family: LatoRegular;
   color: #fff;
   background-color: #323335;
   border-radius: 2px;
@@ -722,8 +637,176 @@ figure > img {
   opacity: 0.9;
 }
 
-.post-comments .media.media-author .media-heading h4 {
+.post-comments .media .media-heading h4 {
   color: #e9e9e9;
+}
+
+.post-comments {
+  margin-bottom: 30px;
+}
+
+/* стили для формы комментариев */
+
+/* ограничения на максимальную и минимальную ширину текстовой области */
+.post-reply .form-group > textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+.form-group > .input,
+textarea {
+  font-family: LatoLight;
+  font-size: 1.1em;
+  border: 1px transparent;
+  background: #393c3d;
+  padding: 15px 25px;
+  color: #e9e9e9;
+  width: 100%;
+}
+
+.post-reply .submit-button {
+  color: #e9e9e9;
+  background: #be1522;
+  padding: 0 20px;
+  height: 50px;
+  min-width: 180px;
+  width: 50%;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.post-reply .submit-button:hover {
+  background: #1a1d20;
+}
+
+/* Страница обои */
+
+/* Небольшой банер на странице обои */
+#walp-baner {
+  background: url(../img/metal2.jpg) no-repeat center center fixed;
+  display: table;
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+  background-position-y: 30%;
+  transition: all 0.3s;
+}
+
+/* кнопка поиска */
+
+.form-find .input {
+  font-family: LatoLight;
+  font-size: 1.1em;
+  border: 1px transparent;
+  background: #393c3d;
+  padding: 0px 25px;
+  height: 50px;
+  color: #e9e9e9;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.form-find .find-button {
+  color: #e9e9e9;
+  background: #be1522;
+  height: 50px;
+  width: 100%;
+  border: none;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+}
+
+.post-reply .find-button:hover {
+  background: #1a1d20;
+}
+
+/* Медиазапроссы */
+
+@media (max-width: 990px) {
+  .history-block h2 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 1250px) {
+  .history-block h2 {
+    font-size: 1.3em;
+  }
+
+  #walp-baner {
+    height: 40%;
+    background-position-y: 50%;
+  }
+
+  #news-baner {
+    height: 40%;
+    background-position-y: 30%;
+  }
+}
+
+@media (max-width: 525px) {
+  .history-block h2 {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-column ul {
+    text-align: left;
+  }
+}
+
+@media (max-width: 320px) {
+  .scrolled #brand-image {
+    width: 120px;
+  }
+}
+
+@media (max-width: 950px) {
+  #brand-image {
+    margin-left: 10%;
+  }
+
+  .navbar-brand {
+    margin: 0;
+  }
+
+  .sign_in {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* делаем картинке меньше размер*/
+  #brand-image {
+    width: 170px;
+  }
+  .sign_in {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav_items {
+    margin-left: 10px !important;
+  }
+
+  #home {
+    background-position: 30%;
+  }
+}
+
+@media (max-width: 990px) {
+  footer .box {
+    margin-top: 15px;
+  }
+
+  .logo_sec {
+    width: 180px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -755,3 +838,4 @@ figure > img {
     margin-left: 0px;
   }
 }
+

@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ROCK. Главная страница. История рока</title>
+    <title>
+      ROCK. Breaking Benjamin и Five Finger Death Punch пожертвовали 190 тысяч
+      долларов на благотворительность
+    </title>
 
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
-
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link type="text/css" rel="stylesheet" href="css/button_toggle.css" />
-    <link type="text/css" rel="stylesheet" href="css/carousel.css" />
+    <link type="text/css" rel="stylesheet" href="style/bootstrap.css" />
+    <link rel="stylesheet" href="style/font-awesome/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <link type="text/css" rel="stylesheet" href="style/button_toggle.css" />
   </head>
 
   <body>
@@ -47,7 +48,7 @@
                   <a href="news.html">Новости</a>
                 </li>
                 <li class="nav_items">
-                  <a href="wallpaper.html">Тексты</a>
+                  <a href="wallpaper.html">Обои</a>
                 </li>
                 <li class="nav_items">
                   <a href="contact.html">Контакты</a>
@@ -57,6 +58,7 @@
                     >Вход<img
                       src="img/user2.png"
                       style="width: 20px; margin-left: 5px;"
+                      alt=""
                   /></a>
                 </li>
               </ul>
@@ -66,11 +68,15 @@
       </div>
     </nav>
 
-    <!-- банер. Паралакс с запаздыванием -->
+    <!-- банер-паралакс -->
     <div id="post-header" class="page-header">
       <div
         class="page-header-bg"
-        style="background-image: url('./img/Breaking-Benjamin.jpg');"
+        style="background: url(../img/Breaking-Benjamin.jpg) no-repeat center center fixed;
+        display: table;
+        width: 100%;
+        height: 100%;
+        background-size: cover;"
       ></div>
       <div class="container">
         <div class="row">
@@ -102,7 +108,7 @@
         <div class="row">
           <div class="col-md-8">
             <div class="section-row">
-              <h3>
+              <h3 class="second-tittle">
                 Кто-то хорошо потрудился летом
               </h3>
               <p>
@@ -150,10 +156,7 @@
                       <span class="time">5 минут назад</span>
                     </div>
                     <p class="comment-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Прекрасный поступок!
                     </p>
                     <a href="#" class="reply">Ответить</a>
                   </div>
@@ -168,10 +171,7 @@
                       <span class="time">10 минут назад</span>
                     </div>
                     <p class="comment-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      По моему мнению, BB и FFDP лучшие группы!
                     </p>
                     <a href="#" class="reply">Ответить</a>
                   </div>
@@ -182,29 +182,80 @@
                   </div>
                   <div>
                     <div class="media-heading">
-                      <h4>Анджелика</h4>
+                      <h4>Анжелика</h4>
                       <span class="time">12 минут назад</span>
                     </div>
                     <p class="comment-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Главное чтобы деньги пошли в нужное русло.
                     </p>
                     <a href="#" class="reply">Ответить</a>
                   </div>
                 </div>
-                <!-- /comment -->
+              </div>
+
+              <!-- форма для комментов -->
+              <div class="section-row">
+                <div class="section-title">
+                  <h3 class="title">Оставить комментарий</h3>
+                </div>
+                <form class="post-reply">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <div class="form-group">
+                        <input
+                          class="input"
+                          id="name"
+                          type="text"
+                          name="name"
+                          placeholder="Имя"
+                          pattern="[a-zА-я0-9]{3,25}$"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="form-group">
+                        <input
+                          class="input"
+                          id="email"
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          pattern="[a-zA-Z0-9.]*[@][a-zA-Z]*[.]{1}[a-zA-Z]{2,6}$"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="form-group">
+                        <textarea
+                          class="input"
+                          id="message"
+                          name="message"
+                          placeholder="Сообщение"
+                          required
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <div class="col-md-8 center">
+                      <button class="submit-button" onclick="add_comment()">
+                        Отправить
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
 
           <!-- сайдбар -->
           <div class="col-md-4">
-            <!-- post widget -->
             <div class="aside-widget">
               <div class="section-title">
-                <h2 class="title">Популярные статьи</h2>
+                <h2 class="title">
+                  Популярные статьи
+                </h2>
               </div>
               <div class="post post-widget">
                 <a class="post-img" href="post.html"
@@ -212,7 +263,9 @@
                 /></a>
                 <div class="post-body">
                   <h3 class="post-title">
-                    <a href="post.html">Легендарные Megadeth едут в Минск</a>
+                    <a href="post.html">
+                      Легендарные Megadeth едут в Минск
+                    </a>
                   </h3>
                 </div>
               </div>
@@ -223,7 +276,9 @@
                 /></a>
                 <div class="post-body">
                   <h3 class="post-title">
-                    <a href="post.html">Легендарные Metallica едут в Минск</a>
+                    <a href="post.html">
+                      Легендарные Metallica едут в Минск
+                    </a>
                   </h3>
                 </div>
               </div>
@@ -234,7 +289,9 @@
                 /></a>
                 <div class="post-body">
                   <h3 class="post-title">
-                    <a href="post.html">Легендарные Nirvana едут в Минск</a>
+                    <a href="post.html">
+                      Легендарные Nirvana едут в Минск
+                    </a>
                   </h3>
                 </div>
               </div>
@@ -269,22 +326,34 @@
           <div class="col-md-4 box">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a
+                  href="https://twitter.com/MrBoss2142?lang=ru"
+                  target="_blank"
+                >
                   <i class="fa fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a
+                  href="https://www.facebook.com/MrBOSS2142?ref=bookmarks"
+                  target="_blank"
+                >
                   <i class="fa fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a
+                  href="https://www.instagram.com/ssukharevich/"
+                  target="_blank"
+                >
                   <i class="fa fa-instagram"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a
+                  href="https://www.linkedin.com/in/sergey-sukharevich-235522162/"
+                  target="_blank"
+                >
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
@@ -294,7 +363,7 @@
             <h4 class="copyright quick-links">
               &copy; Sukharevich Sergey
               <script>
-                document.write(new Date().getFullYear()); // выводит текущий год
+                document.write(new Date().getFullYear());
               </script>
             </h4>
           </div>
@@ -307,22 +376,9 @@
       <i class="fa fa-chevron-up"></i>
     </div>
 
-    <script src="js/jquery-2.2.4.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/main.js"></script>
-
-    <!-- подключение файлов jquery и bootstrap js для слайдера. С другими чего-то не работает -->
-    <script
-      src="https://code.jquery.com/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
+    <script src="script/jquery-3.4.1.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/jquery.stellar.min.js"></script>
+    <script src="script/main.js"></script>
   </body>
 </html>
