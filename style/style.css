@@ -4,9 +4,18 @@
   transition: all 0.5s;
 }
 
+:active,
+:hover,
+:focus {
+  /*Убрать синюю обводку*/
+  outline: 0;
+  outline-offset: 0;
+}
+
 a,
 a:hover {
   text-decoration: none;
+  outline: none;
 }
 
 p {
@@ -30,6 +39,15 @@ body {
   width: 100%;
   /* шрифт по умолчанию у всех лементов LatoRegular */
   font-family: LatoRegular;
+}
+
+.show {
+  display: block;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
 }
 
 .sign_in {
@@ -121,8 +139,7 @@ h3 {
 }
 
 #home {
-  background: url(../img/met2.jpg) ;
-
+  background: url(../img/met2.jpg)no-repeat fixed;
   display: table;
   background-size: cover;
   width: 100%;
@@ -166,7 +183,7 @@ h3 {
   color: #e9e9e9 !important;
 }
 
-.black_article_block .line {
+.line {
   width: 250px;
   height: 2px;
   background-color: #4e5152;
@@ -174,7 +191,7 @@ h3 {
   position: relative;
   z-index: 1;
 }
-.black_article_block .line::after {
+.line::after {
   width: 60px;
   height: 3px;
   background-color: #be1522;
@@ -669,13 +686,17 @@ textarea {
   width: 100%;
 }
 
+.form-group > .input:hover {
+  border: 1px transparent;
+}
+
 .post-reply .submit-button {
   color: #e9e9e9;
   background: #be1522;
   padding: 0 20px;
   height: 50px;
   min-width: 180px;
-  width: 50%;
+  width: 100%;
   border: none;
   transition: all 0.3s ease;
 }
@@ -697,9 +718,9 @@ textarea {
   transition: all 0.3s;
 }
 
-/* кнопка поиска */
+/* кнопка поиска группы*/
 
-.form-find .input {
+.form-find  .input {
   font-family: LatoLight;
   font-size: 1.1em;
   border: 1px transparent;
@@ -723,6 +744,118 @@ textarea {
 
 .post-reply .find-button:hover {
   background: #1a1d20;
+}
+
+/* контакты */
+
+#contact-baner {
+  background: url(../img/concert.jpg) no-repeat center center fixed;
+  display: table;
+  width: 100%;
+  height: 30%;
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.contact {
+  padding: 100px 0px;
+  background: #14181c;
+}
+
+/* кнопка контакты */
+
+.contact .submit-button {
+  color: #e9e9e9;
+  background: #be1522;
+  padding: 0 20px;
+  height: 50px;
+  min-width: 180px;
+  width: 100%;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* блок рассылки */
+
+.mailing_block h4 {
+  color: #e9e9e9 !important;
+  margin: 5px;
+}
+
+.mailing_block {
+  margin-top: 20px;
+  padding: 30px 20px;
+  border: 1px solid #393c3d;
+}
+
+.padding-bottom {
+  padding-bottom: 50px;
+}
+
+.padding-bottom h4 {
+  color: #e9e9e9 !important;
+  font-family: LatoRegular !important;
+}
+
+/* страница входа */
+
+#login-baner {
+  background: url(../img/black.jpg) no-repeat center center fixed;
+  display: table;
+  width: 100%;
+  height: 30%;
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.signin-block {
+  padding: 80px 0px 90px 0px;
+  background: #14181c;
+}
+
+.signin-block .submit-button {
+  color: #e9e9e9;
+  background: #be1522;
+  padding: 0 20px;
+  height: 50px;
+  min-width: 180px;
+  width: 100%;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.tab {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.tab {
+  background: #4e5152;
+}
+
+.tab a {
+  display: block;
+  padding: 30px;
+  font-size: 1.2em;
+  color: #e9e9e9;
+  font-family: LatoRegular;
+}
+
+.tab-group {
+  list-style: none;
+}
+
+.tab-group li{
+  text-align: center;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+.tab_active {
+  background-color: #a81622;
 }
 
 /* Медиазапроссы */

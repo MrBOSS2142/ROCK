@@ -54,7 +54,7 @@
                   <a href="contact.html">Контакты</a>
                 </li>
                 <li class="nav_items sign_in">
-                  <a href="#"
+                  <a href="signin.html"
                     >Вход<img
                       src="img/user2.png"
                       style="width: 20px; margin-left: 5px;"
@@ -200,7 +200,7 @@
                 </div>
                 <form class="post-reply">
                   <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                       <div class="form-group">
                         <input
                           class="input"
@@ -213,20 +213,21 @@
                         />
                       </div>
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                       <div class="form-group">
                         <input
                           class="input"
                           id="email"
                           type="email"
                           name="email"
+                          title="Введите пожалуйста почту в формате 123@rock.com"
                           placeholder="Email"
                           pattern="[a-zA-Z0-9.]*[@][a-zA-Z]*[.]{1}[a-zA-Z]{2,6}$"
                           required
                         />
                       </div>
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                       <div class="form-group">
                         <textarea
                           class="input"
@@ -238,7 +239,7 @@
                       </div>
                     </div>
 
-                    <div class="col-md-8 center">
+                    <div class="col-md-4 center">
                       <button class="submit-button" onclick="add_comment()">
                         Отправить
                       </button>

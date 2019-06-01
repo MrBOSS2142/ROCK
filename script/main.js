@@ -7,7 +7,7 @@ $(document).ready(function() {
     // анимация перехода к якорю
     jQuery("html:not(:animated),body:not(:animated)").animate(
       { scrollTop: destination },
-      800
+      2000
     );
     return false;
   });
@@ -64,7 +64,7 @@ function checkBackToTop() {
 //вывод имени группы
 function find_pict() {
   let group = document.getElementById("name_group").value;
-  alert(group);
+  alert("Поиск картинок группы " + group);
 }
 
 //вывод данных комментария
@@ -72,5 +72,57 @@ function add_comment() {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let mess = document.getElementById("message").value;
-  alert(name + "/n" + email + "/n" + mess);
+  alert(
+    "Добавление комментария:" +
+      "\n" +
+      "Имя: " +
+      name +
+      "\n" +
+      "Email: " +
+      email +
+      "\n" +
+      "Сообщение :" +
+      mess
+  );
 }
+
+function send_mail() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let subject = document.getElementById("subject").value;
+  let mess = document.getElementById("message").value;
+  if (name != "" && email != "" && subject != "" && mess != "") {
+    alert("Письмо отправлено!");
+  } else {
+    alert("Заполните все оставшиеся поля");
+  }
+}
+
+function subcribe_mailing() {
+  let email = document.getElementById("mailing_email").value;
+
+  if (email != "") {
+    alert("Подписка на почту " + email + " оформлена!");
+  } else {
+    alert("Заполните почту");
+  }
+}
+
+// переключение с входа на регистрацию
+$(".tab a").on("click", function(e) {
+  $(this)
+    .parent()
+    .addClass("tab_active"); // добавляем класс
+  $(this)
+    .parent()
+    .siblings()
+    .removeClass("tab_active"); // удаляем класс у других элементов
+
+  target = $(this).attr("href"); //получаем id блока, который нужно скрыть
+
+  $(".tab-content > div")
+    .not(target)
+    .hide(); // крвываем блоки, в которых нет нужного id
+
+  $(target).fadeIn(800); // скрытие с анимацией за 0.8 секунд
+});
