@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".anchor").click(function() {
+  $("a").click(function() {
     // клик по якорной ссылке
     var elementClick = $(this).attr("href"); // имя якоря
     // расчет расстояния до якоря
